@@ -1,0 +1,53 @@
+<template>
+  <div class="membership">
+    <h1>Membership</h1>
+    <div v-if="membershipList">
+      <md-table v-once>
+        <md-table-header>
+          <md-table-row>
+            <md-table-head>email</md-table-head>
+            <md-table-head>groupId</md-table-head>
+            <md-table-head>status</md-table-head>
+            <md-table-head>created</md-table-head>
+          </md-table-row>
+        </md-table-header>
+
+        <md-table-body>
+          <md-table-row v-for="(membership, index) in membershipList" :key="index">
+            <md-table-cell>{{index}}:{{membership.user.mail}}</md-table-cell>
+            <md-table-cell>{{membership.group.groupId}}</md-table-cell>
+            <md-table-cell>{{membership.approved ? 'approved' : 'created'}}</md-table-cell>
+            <md-table-cell>{{membership.created}}</md-table-cell>
+          </md-table-row>
+        </md-table-body>
+      </md-table>
+    </div>
+  </div>
+</template>
+
+<script>
+  export default {
+    name: 'membership',
+    data () {
+      return {
+        membershipList: null
+      }
+    },
+    created () {
+      this.axios.get('/membership').then((res) => {
+        this.membershipList = res.data;
+      }, (err) => {
+          console.log(err);
+      })
+    }
+  }
+</script>
+
+<style scoped>
+  .membership {
+    padding: 15px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>

@@ -1,21 +1,28 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Settings from '@/components/Settings'
+import Users from '@/components/Users'
 import Default from '@/components/Default'
+import Membership from '@/components/Membership'
+import Group from '@/components/group'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'default',
-      component: Default
+      path: '/users',
+      name: 'users',
+      component: Users
     },
     {
-      path: '/settings',
-      name: 'settings',
-      component: Settings
+      path: '/membership',
+      name: 'membership',
+      component: Membership
+    },
+    {
+      path: '/group',
+      name: 'group',
+      component: Group
     }
   ]
 })
