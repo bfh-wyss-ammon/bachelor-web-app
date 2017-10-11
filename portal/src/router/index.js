@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Users from '@/components/Users'
-import Default from '@/components/Default'
+import Account from '@/components/Account'
+import Bot from '@/components/Bot'
+import VirtualDrive from '@/components/VirtualDrive'
 import Membership from '@/components/Membership'
 import Group from '@/components/group'
 
@@ -10,9 +11,9 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/users',
-      name: 'users',
-      component: Users
+      path: '/accounts',
+      name: 'accounts',
+      component: Account
     },
     {
       path: '/membership',
@@ -23,6 +24,16 @@ export default new Router({
       path: '/group',
       name: 'group',
       component: Group
+    },
+    {
+      path: '/virtualdrive',
+      name: 'virtualdrive',
+      component: VirtualDrive
+    },
+    {
+      path: '/bots',
+      name: 'bots',
+      component: Bot
     }
   ]
 })
