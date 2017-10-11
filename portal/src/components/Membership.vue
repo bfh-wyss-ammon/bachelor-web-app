@@ -44,10 +44,4 @@
 </script>
 
 <style scoped>
-  .membership {
-    padding: 15px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-  }
 </style>
