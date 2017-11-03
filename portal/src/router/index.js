@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Account from '@/components/Account'
 import Bot from '@/components/Bot'
 import VirtualDrive from '@/components/VirtualDrive'
+import Live from '@/components/Live'
 import Membership from '@/components/Membership'
 import Group from '@/components/group'
 
@@ -29,6 +30,11 @@ export default new Router({
       path: '/virtualdrive',
       name: 'virtualdrive',
       component: VirtualDrive
+    },
+    {
+      path: '/live',
+      name: 'live',
+      component: Live
     },
     {
       path: '/bots',

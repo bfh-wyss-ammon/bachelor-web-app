@@ -30,6 +30,7 @@ Vue.use(VueAxios, axios)
 Vue.config.productionTip = false
 Vue.prototype.$baseURL = configuration.baseURL
 Vue.prototype.$webSocketURL = configuration.webSocketURL
+Vue.prototype.$webSocketProviderURL = configuration.webSocketProviderURL
 Vue.prototype.$botURL = configuration.botURL
 axios.defaults.baseURL = Vue.prototype.$baseURL
 
