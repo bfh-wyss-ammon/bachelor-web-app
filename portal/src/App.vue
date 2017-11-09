@@ -20,6 +20,9 @@
         <md-list-item>
           <router-link exact to="/livemap">Live Map</router-link>
         </md-list-item>
+        <md-list-item>
+          <router-link exact to="/payments">Payments</router-link>
+        </md-list-item>
       </md-list>
     </md-whiteframe>
     <md-whiteframe id="content">

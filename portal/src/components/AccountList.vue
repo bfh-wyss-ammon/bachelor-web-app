@@ -54,7 +54,7 @@
       },
       onClose(res) {
         if (res == 'ok' && this.password.length > 3) {
-          this.axios.post('/users/' + this.user.userId, this.password).then((res) => {
+          this.axios.get('/users/' + this.user.userId, this.password).then((res) => {
             MessageBus.$emit('on-info', 'password change successful');
             this.user = {};
             this.password = '';

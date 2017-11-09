@@ -6,6 +6,7 @@ import VirtualDrive from '@/components/VirtualDrive'
 import Live from '@/components/Live'
 import Membership from '@/components/Membership'
 import Group from '@/components/group'
+import Payment from '@/components/Payment'
 
 Vue.use(Router)
 
@@ -40,6 +41,11 @@ export default new Router({
       path: '/bots',
       name: 'bots',
       component: Bot
-    }
+    },
+    {
+      path: '/payments',
+      name: 'payment',
+      component: Payment
+    },
   ]
 })

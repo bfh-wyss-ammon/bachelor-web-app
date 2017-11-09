@@ -32,6 +32,7 @@ Vue.prototype.$baseURL = configuration.baseURL
 Vue.prototype.$webSocketURL = configuration.webSocketURL
 Vue.prototype.$webSocketProviderURL = configuration.webSocketProviderURL
 Vue.prototype.$botURL = configuration.botURL
+Vue.prototype.$providerURL = configuration.providerURL
 axios.defaults.baseURL = Vue.prototype.$baseURL
 
 // components
