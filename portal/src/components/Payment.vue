@@ -49,6 +49,7 @@
 
 <script>
   import {MessageBus} from '../main'
+  import {ProviderHttp} from '../main'
 
   export default {
     name: 'settings',
@@ -67,16 +68,14 @@
         day = day.length == 1 ? "0" + day : day;
         let dRequest = day + '-' + mm + '-' + d.getFullYear();
 
-        this.axios.get(this.$providerURL + '/payments/' + dRequest).then((res) => {
+        ProviderHttp.get( '/payments/' + dRequest).then((res) => {
           this.payments = res.data;
         }, (err) => {
           MessageBus.$emit('on-error', err);
         });
 
-        this.axios.get(this.$providerURL + '/costs/' + dRequest).then((res) => {
+        ProviderHttp.get('/costs/' + dRequest).then((res) => {
           this.costs = res.data;
-
-          console.log(this.costs);
         }, (err) => {
           MessageBus.$emit('on-error', err);
         })

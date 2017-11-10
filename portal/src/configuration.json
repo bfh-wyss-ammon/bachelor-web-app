@@ -1,9 +1,5 @@
 {
-  "baseURL": "http://localhost:10009",
-  "authorityURL": "http://localhost:10000",
-  "providerURL": "http://laptop:10001",
-  "webSocketURL": "ws://laptop:10010",
-  "webSocketProviderURL": "ws://laptop:10011",
-  "botURL": "http://localhost:10011",
+  "authorityURL": "localhost:10000",
+  "providerURL": "laptop:10001",
   "googleMapsKey": "AIzaSyATNKqOZf7zJdKrPbiUFTF36KlsQFmSRu0"
 }

@@ -25,6 +25,8 @@
 
 <script>
   import {MessageBus} from '../main'
+  import {AuthorityHttp} from '../main'
+
   export default {
     event: 'created',
     data() {
@@ -47,7 +49,7 @@
     },
     methods: {
       saveAccount() {
-        this.axios.post('/users', this.user).then((res) => {
+        AuthorityHttp.post('/users', this.user).then((res) => {
           MessageBus.$emit('on-info', 'User: ' + this.user.firstname + ' ' + this.user.lastname + ' successfully created.');
           this.$emit('created', {
             id: this.user.id,

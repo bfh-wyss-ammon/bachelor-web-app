@@ -17,6 +17,7 @@
 
 <script>
   import {MessageBus} from '../main'
+  import {AuthorityHttp} from '../main'
 
   export default {
     name: 'settings',
@@ -32,7 +33,8 @@
       }
     },
     created() {
-      this.axios.get('/users').then((res) => {
+        console.log(AuthorityHttp);
+      AuthorityHttp.get('/users').then((res) => {
         this.users = res.data
       }, (error) => {
         MessageBus.$emit('on-error', error);

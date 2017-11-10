@@ -12,13 +12,7 @@
           <router-link exact to="/group">Groups</router-link>
         </md-list-item>
         <md-list-item>
-          <router-link exact to="/bots">Bots</router-link>
-        </md-list-item>
-        <md-list-item>
           <router-link exact to="/live">Live</router-link>
-        </md-list-item>
-        <md-list-item>
-          <router-link exact to="/livemap">Live Map</router-link>
         </md-list-item>
         <md-list-item>
           <router-link exact to="/payments">Payments</router-link>

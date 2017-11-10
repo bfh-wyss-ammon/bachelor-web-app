@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Account from '@/components/Account'
-import Bot from '@/components/Bot'
 import VirtualDrive from '@/components/VirtualDrive'
 import Live from '@/components/Live'
 import Membership from '@/components/Membership'
@@ -36,11 +35,6 @@ export default new Router({
       path: '/live',
       name: 'live',
       component: Live
-    },
-    {
-      path: '/bots',
-      name: 'bots',
-      component: Bot
     },
     {
       path: '/payments',

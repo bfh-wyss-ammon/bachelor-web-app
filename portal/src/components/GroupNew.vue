@@ -28,10 +28,8 @@
       }
     },
     created() {
-      this.webSocket = new WebSocket(this.$webSocketURL + '/groups');
+      this.webSocket = new WebSocket(this.$authortiyWebSocketURL + '/groups?token=7596b176-c54a-11e7-abc4-cec278b6b50a');
       this.webSocket.onmessage = (msg) => {
-        console.log(msg.data)
-        console.log(this.webSocket && this.webSocket.readyState == 1)
         this.status = msg.data;
         if (msg.data == 'done') {
           MessageBus.$emit('on-info', "new group successfully generated!");

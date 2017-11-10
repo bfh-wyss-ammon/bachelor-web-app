@@ -10,12 +10,9 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import * as VueGoogleMaps from 'vue2-google-maps'
 import AccountList from '@/components/AccountList'
-import BotList from '@/components/BotList'
 import GroupList from '@/components/GroupList'
 import GroupNew from '@/components/GroupNew'
 import AccountNew from '@/components/AccountNew'
-import BotNew from '@/components/BotNew'
-import BotDetail from '@/components/BotDetail'
 import KeyInfo from '@/components/KeyInfo'
 import Message from '@/components/Message'
 import moment from 'moment'
@@ -28,12 +25,21 @@ Vue.use(VueMaterial)
 Vue.use(VueAxios, axios)
 
 Vue.config.productionTip = false
-Vue.prototype.$baseURL = configuration.baseURL
-Vue.prototype.$webSocketURL = configuration.webSocketURL
-Vue.prototype.$webSocketProviderURL = configuration.webSocketProviderURL
-Vue.prototype.$botURL = configuration.botURL
-Vue.prototype.$providerURL = configuration.providerURL
-axios.defaults.baseURL = Vue.prototype.$baseURL
+Vue.prototype.$authortiyWebSocketURL = `ws://${configuration.authorityURL}/sockets`;
+Vue.prototype.$providerWebSocketURL = `ws://${configuration.providerURL}/sockets`;
+
+
+export const AuthorityHttp = axios.create({
+  baseURL: `http://${configuration.authorityURL}/api/protected`,
+  timeout: 5000,
+  headers: {'x-secure-token': '7596b176-c54a-11e7-abc4-cec278b6b50a'}
+});
+
+export const ProviderHttp = axios.create({
+  baseURL: `http://${configuration.providerURL}/api/protected`,
+  timeout: 5000,
+  headers: {'x-secure-token': '7596b176-c54a-11e7-abc4-cec278b6b50a'}
+});
 
 // components
 Vue.component('AccountList', AccountList)
@@ -42,9 +48,6 @@ Vue.component('Message', Message)
 Vue.component('GroupList', GroupList)
 Vue.component('GroupNew', GroupNew)
 Vue.component('KeyInfo', KeyInfo)
-Vue.component('BotNew', BotNew)
-Vue.component('BotList', BotList)
-Vue.component('BotDetail', BotDetail)
 
 
 

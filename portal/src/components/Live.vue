@@ -37,7 +37,7 @@
       }
     },
     created() {
-      this.webSocket = new WebSocket(this.$webSocketProviderURL + '/live');
+      this.webSocket = new WebSocket(this.$providerWebSocketURL + '/live?token=7596b176-c54a-11e7-abc4-cec278b6b50a');
       this.webSocket.onmessage = (msg) => {
         var obj = JSON.parse(msg.data);
         this.markers.push({

@@ -16,6 +16,8 @@
 
 <script>
   import {MessageBus} from '../main'
+  import {AuthorityHttp} from '../main'
+
   export default {
     name: 'default',
     data () {
@@ -28,7 +30,7 @@
     },
     methods: {
       load() {
-        this.axios.get('/groups').then((res) => {
+        AuthorityHttp.get('/groups').then((res) => {
           this.groups = res.data;
         }, (error) => {
           MessageBus.$emit('on-error', error);
