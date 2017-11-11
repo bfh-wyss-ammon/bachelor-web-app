@@ -1,16 +1,22 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Account from '@/components/Account'
+import Account from '@/pages/Account'
 import VirtualDrive from '@/components/VirtualDrive'
 import Live from '@/components/Live'
-import Membership from '@/components/Membership'
-import Group from '@/components/group'
-import Payment from '@/components/Payment'
+import Membership from '@/pages/Membership'
+import Payment from '@/pages/Payment'
+import Group from '@/pages/group'
+import Default from '@/pages/Default'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    {
+      path: '/',
+      name: 'default',
+      component: Default
+    },
     {
       path: '/accounts',
       name: 'accounts',
@@ -22,7 +28,7 @@ export default new Router({
       component: Membership
     },
     {
-      path: '/group',
+      path: '/groups',
       name: 'group',
       component: Group
     },

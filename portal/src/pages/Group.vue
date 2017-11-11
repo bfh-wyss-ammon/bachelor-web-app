@@ -1,17 +1,17 @@
 <template>
-  <div class="group">
-    <md-toolbar>
-      <h2 class="md-title">Groups</h2>
-    </md-toolbar>
-    <md-tabs ref="tabs">
-      <md-tab id="overview" md-label="Overview" md-accent>
-        <group-list :groups="groups"></group-list>
-      </md-tab>
-      <md-tab md-label="New">
-        <group-new v-on:created="load"></group-new>
-      </md-tab>
-    </md-tabs>
-  </div>
+  <md-theme md-name="authority">
+    <top-bar :title="'Groups'"></top-bar>
+    <div class="group">
+      <md-tabs ref="tabs">
+        <md-tab id="overview" md-label="Overview" md-accent>
+          <group-list :groups="groups"></group-list>
+        </md-tab>
+        <md-tab md-label="New">
+          <group-new v-on:created="load"></group-new>
+        </md-tab>
+      </md-tabs>
+    </div>
+  </md-theme>
 </template>
 
 <script>
@@ -26,7 +26,7 @@
       }
     },
     created () {
-     this.load()
+      this.load()
     },
     methods: {
       load() {

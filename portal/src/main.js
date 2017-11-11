@@ -15,6 +15,7 @@ import GroupNew from '@/components/GroupNew'
 import AccountNew from '@/components/AccountNew'
 import KeyInfo from '@/components/KeyInfo'
 import Message from '@/components/Message'
+import TopBar from '@/components/TopBar'
 import moment from 'moment'
 
 // a messageBugs
@@ -48,10 +49,21 @@ Vue.component('Message', Message)
 Vue.component('GroupList', GroupList)
 Vue.component('GroupNew', GroupNew)
 Vue.component('KeyInfo', KeyInfo)
+Vue.component('TopBar', TopBar)
 
+Vue.material.registerTheme({
+  app: {
+    primary: 'cyan'
+  },
+  authority: {
+    primary: 'orange',
+  },
+  provider: {
+    primary: 'green',
+  }
+})
 
-
-Vue.filter('formatDate', function(value) {
+Vue.filter('formatDate', function (value) {
   if (value) {
     return moment(String(value)).format('DD.MM.YYYY')
   }
@@ -73,5 +85,5 @@ new Vue({
   el: '#app',
   router,
   template: '<App/>',
-  components: {  App }
+  components: {App}
 })
