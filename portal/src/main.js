@@ -39,7 +39,7 @@ export const AuthorityHttp = axios.create({
 export const ProviderHttp = axios.create({
   baseURL: `http://${configuration.providerURL}/api/protected`,
   timeout: 5000,
-  headers: {'x-secure-token': '7596b176-c54a-11e7-abc4-cec278b6b50a'}
+  headers: {'x-secure-token': '9b8518f9-be03-4cba-a75c-18d73b0e395a'}
 });
 
 // components

@@ -2,6 +2,8 @@
   <md-theme md-name="provider">
     <div>
       <top-bar :title="'CashFlow'"></top-bar>
+
+
       <md-tabs md-right @change="change">
       <md-tab v-bind:md-label="day" v-for="(day, index) in days" :key="index">
       </md-tab>
@@ -11,19 +13,16 @@
         <md-table-header>
           <md-table-row>
             <md-table-head>groupId</md-table-head>
-            <md-table-head>period</md-table-head>
             <md-table-head>sum of payments</md-table-head>
             <md-table-head>sum of costs</md-table-head>
           </md-table-row>
         </md-table-header>
 
         <md-table-body>
-          <md-table-row v-for="(payment, index) in payments" :key="index">
-            <md-table-cell>{{payment.groupId}}</md-table-cell>
-            <md-table-cell>{{payment.period}}</md-table-cell>
-            <md-table-cell>{{payment.total}}</md-table-cell>
-
-            <md-table-cell>{{ getCostForPeriode(payment.groupId).sum}}</md-table-cell>
+          <md-table-row v-for="(cost, index) in costs" :key="index">
+            <md-table-cell>{{cost.groupId}}</md-table-cell>
+            <md-table-cell>{{getPaymentsForCost(cost.groupId).total}}</md-table-cell>
+            <md-table-cell>{{cost.sum}}</md-table-cell>
           </md-table-row>
         </md-table-body>
       </md-table>
@@ -39,7 +38,7 @@
     name: 'settings',
     data() {
       return {
-        date: {},
+        selectedDate: {},
         payments: [],
         costs: [],
         loading: true,
@@ -59,10 +58,10 @@
         this.loading = true;
         promises.push(
           ProviderHttp.get('/costs/' + date).then((res) => {
-            this.costs = res.data;
-          }, (err) => {
-            MessageBus.$emit('on-error', err);
-          }));
+          this.costs = res.data;
+        }, (err) => {
+          MessageBus.$emit('on-error', err);
+        }));
 
         Promise.all(promises).then(() => {
           this.loading = false;
@@ -72,13 +71,10 @@
       change(date) {
         this.load(this.days[date].split('.').join('-'));
       },
-      getCostForPeriode(groupId) {
-        let i = this.costs.findIndex(cost => cost.groupId == groupId);
+      getPaymentsForCost(groupId) {
+       let i =  (this.payments || []).findIndex(p => p.groupId == groupId);
 
-        console.log(this.costs);
-        console.log(groupId);
-
-        return i >= 0 ? this.costs[i] : {sum: 'no costs reported yet'};
+       return i >= 0 ? this.payments[i] : {total: 'no payments found'};
 
       }
     },
@@ -94,6 +90,7 @@
         day = day.length == 1 ? "0" + day : day;
         this.days.push(day + '.' + mm + '.' + d.getFullYear());
       }
+      this.selectedDate = this.days[0];
     }
   }
 </script>
