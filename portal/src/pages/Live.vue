@@ -1,4 +1,6 @@
 <template>
+  <md-theme md-name="provider">
+    <top-bar :title="'Groups'"></top-bar>
   <div>
     <gmap-map
       :center="center"
@@ -13,6 +15,7 @@
       ></gmap-marker>
     </gmap-map>
   </div>
+  </md-theme>
 </template>
 
 <script>
@@ -37,7 +40,7 @@
       }
     },
     created() {
-      this.webSocket = new WebSocket(this.$providerWebSocketURL + '/live?token=7596b176-c54a-11e7-abc4-cec278b6b50a');
+      this.webSocket = new WebSocket(this.$providerWebSocketURL + '/live?token=9b8518f9-be03-4cba-a75c-18d73b0e395a');
       this.webSocket.onmessage = (msg) => {
         var obj = JSON.parse(msg.data);
         this.markers.push({

@@ -56,6 +56,18 @@
                       <span>CashFlow</span>
                     </router-link>
                   </md-list-item>
+                  <md-list-item class="md-inset">
+                    <router-link exact to="/live">
+                      <md-icon>satellite</md-icon>
+                      <span>Live</span>
+                    </router-link>
+                  </md-list-item>
+                  <md-list-item class="md-inset">
+                    <router-link exact to="/disputeresolve">
+                      <md-icon>traffic</md-icon>
+                      <span>DisputeResolve</span>
+                    </router-link>
+                  </md-list-item>
                 </md-list>
               </md-list-expand>
             </md-list-item>

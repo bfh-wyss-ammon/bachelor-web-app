@@ -2,11 +2,12 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Account from '@/pages/Account'
 import VirtualDrive from '@/components/VirtualDrive'
-import Live from '@/components/Live'
+import Live from '@/pages/Live'
 import Membership from '@/pages/Membership'
 import Payment from '@/pages/Payment'
 import Group from '@/pages/group'
 import Default from '@/pages/Default'
+import DisputeResolve from '@/pages/DisputeResolve'
 
 Vue.use(Router)
 
@@ -26,6 +27,10 @@ export default new Router({
       path: '/membership',
       name: 'membership',
       component: Membership
+    },{
+      path: '/disputeresolve',
+      name: 'disputeresolve',
+      component: DisputeResolve
     },
     {
       path: '/groups',
