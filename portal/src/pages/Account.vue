@@ -1,13 +1,13 @@
 <template>
   <div>
     <md-theme md-name="authority">
-      <top-bar :title="'Accounts'"></top-bar>
+      <top-bar :title="'Benutzer'"></top-bar>
 
       <md-tabs ref="tabs">
-        <md-tab id="overview" md-label="Overview" md-accent>
+        <md-tab id="overview" md-label="ÜBERSICHT" md-accent>
           <account-list :users="users"></account-list>
         </md-tab>
-        <md-tab md-label="New">
+        <md-tab md-label="NEU">
           <account-new v-on:created="accountCreated"></account-new>
         </md-tab>
       </md-tabs>

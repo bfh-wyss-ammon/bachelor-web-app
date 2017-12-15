@@ -4,8 +4,9 @@
     <md-whiteframe md-elevation="10" class="meta-frame">
       <div class="meta">
         <h1>Implementation eines anonymen Mobility Pricing auf Basis eines Gruppensignaturschemas</h1>
-        <h2>Diplomanden: Pascal Ammon, Gabriel Wyss</h2>
+        <h2>Studenten: Pascal Ammon, Gabriel Wyss</h2>
         <h2>Betreuer: Dr. Eric Dubuis</h2>
+        <h2>Experte: Dr. Igor Metz</h2>
       </div>
     </md-whiteframe>
     <div class="footer">

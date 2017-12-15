@@ -3,9 +3,9 @@
     <md-table id="users">
       <md-table-header>
         <md-table-row>
-          <md-table-head>id</md-table-head>
-          <md-table-head>FirstName</md-table-head>
-          <md-table-head>LastName</md-table-head>
+          <md-table-head>Benutzer ID</md-table-head>
+          <md-table-head>Vorname</md-table-head>
+          <md-table-head>Nachname</md-table-head>
         </md-table-row>
       </md-table-header>
 

@@ -23,19 +23,19 @@
                   <md-list-item class="md-inset">
                     <router-link exact to="/accounts">
                       <md-icon>account_box</md-icon>
-                      <span>Accounts</span>
+                      <span>Benutzer</span>
                     </router-link>
                   </md-list-item>
                   <md-list-item class="md-inset">
                     <router-link exact to="/groups">
                       <md-icon>people</md-icon>
-                      <span>Groups</span>
+                      <span>Gruppen</span>
                     </router-link>
                   </md-list-item>
                   <md-list-item class="md-inset">
                     <router-link exact to="/membership">
                       <md-icon>people</md-icon>
-                      <span>Membership</span>
+                      <span>Mitgliedschaft</span>
                     </router-link>
                   </md-list-item>
                 </md-list>
@@ -53,19 +53,19 @@
                   <md-list-item class="md-inset">
                     <router-link exact to="/payments">
                       <md-icon>account_box</md-icon>
-                      <span>CashFlow</span>
+                      <span>Zahlungsfluss</span>
                     </router-link>
                   </md-list-item>
                   <md-list-item class="md-inset">
                     <router-link exact to="/live">
                       <md-icon>satellite</md-icon>
-                      <span>Live</span>
+                      <span>Karte</span>
                     </router-link>
                   </md-list-item>
                   <md-list-item class="md-inset">
                     <router-link exact to="/disputeresolve">
                       <md-icon>traffic</md-icon>
-                      <span>DisputeResolve</span>
+                      <span>Schlichtung</span>
                     </router-link>
                   </md-list-item>
                 </md-list>

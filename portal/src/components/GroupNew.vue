@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="running" v-if="running">
-      <span>group create process is running. wait...</span>
+      <span>Eine neue Gruppe wird generiert. Bitte warten...</span>
       <md-progress md-indeterminate></md-progress>
     </div>
-    <md-button class="md-raised md-primary" v-bind:disabled="!ready" @click="create">Generate</md-button>
+    <md-button class="md-raised md-primary" v-bind:disabled="!ready" @click="create">Erstellen</md-button>
   </div>
 </template>
 

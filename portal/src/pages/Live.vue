@@ -1,6 +1,6 @@
 <template>
   <md-theme md-name="provider">
-    <top-bar :title="'Groups'"></top-bar>
+    <top-bar :title="'Karte'"></top-bar>
   <div>
     <gmap-map
       :center="center"

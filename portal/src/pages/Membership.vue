@@ -1,15 +1,15 @@
 <template>
   <md-theme md-name="authority">
-    <top-bar :title="'Membership'"></top-bar>
+    <top-bar :title="'Mitgliedschaft'"></top-bar>
     <div class="membership">
       <div v-if="membershipList">
         <md-table>
           <md-table-header>
             <md-table-row>
-              <md-table-head>id</md-table-head>
-              <md-table-head>groupId</md-table-head>
-              <md-table-head>status</md-table-head>
-              <md-table-head>created</md-table-head>
+              <md-table-head>ID</md-table-head>
+              <md-table-head>Gruppen ID</md-table-head>
+              <md-table-head>Status</md-table-head>
+              <md-table-head>Erstellt am</md-table-head>
             </md-table-row>
           </md-table-header>
 
