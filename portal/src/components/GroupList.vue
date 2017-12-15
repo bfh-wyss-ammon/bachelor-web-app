@@ -3,9 +3,9 @@
     <md-table id="groups">
       <md-table-header>
         <md-table-row>
-          <md-table-head>GroupId</md-table-head>
-          <md-table-head>ManagerKeyId</md-table-head>
-          <md-table-head>PublicKeyId</md-table-head>
+          <md-table-head>Gruppen ID</md-table-head>
+          <md-table-head>ManagerKey ID</md-table-head>
+          <md-table-head>PublicKey ID</md-table-head>
         </md-table-row>
       </md-table-header>
 
@@ -14,15 +14,9 @@
           <md-table-cell>{{group.groupId}}</md-table-cell>
           <md-table-cell class="info">
             {{group.managerKey.managerKeyId}}
-            <md-button class="md-icon-button" @click="showManagerKey(group.managerKey)">
-              <md-icon>info</md-icon>
-            </md-button>
           </md-table-cell>
           <md-table-cell class="info">
             {{group.publicKey.publicKeyId}}
-            <md-button class="md-icon-button" @click="showPublicKey(group.publicKey)">
-              <md-icon>info</md-icon>
-            </md-button>
           </md-table-cell>
         </md-table-row>
       </md-table-body>

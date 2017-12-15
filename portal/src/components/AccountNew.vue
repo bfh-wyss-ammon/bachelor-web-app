@@ -2,19 +2,19 @@
   <div>
     <form novalidate @submit.stop.prevent="submit" id="newAccount">
       <md-input-container>
-        <label>Id</label>
+        <label>Benutzer ID</label>
         <md-input v-model="user.id" required></md-input>
       </md-input-container>
       <md-input-container>
-        <label>Firstname</label>
+        <label>Vorname</label>
         <md-input v-model="user.firstname"></md-input>
       </md-input-container>
       <md-input-container>
-        <label>Lastname</label>
+        <label>Nachname</label>
         <md-input v-model="user.lastname"></md-input>
       </md-input-container>
       <md-input-container>
-        <label>Password</label>
+        <label>Passwort</label>
         <md-input v-model="user.password" required type="password"></md-input>
       </md-input-container>
     </form>

@@ -1,7 +1,7 @@
 <template>
   <md-theme md-name="provider">
     <div>
-      <top-bar :title="'CashFlow'"></top-bar>
+      <top-bar :title="'Zahlungsfluss'"></top-bar>
 
 
       <md-tabs md-right @change="change">
@@ -12,9 +12,9 @@
       <md-table id="payment-list" v-if="!loading">
         <md-table-header>
           <md-table-row>
-            <md-table-head>groupId</md-table-head>
-            <md-table-head>sum of payments</md-table-head>
-            <md-table-head>sum of costs</md-table-head>
+            <md-table-head>Gruppen ID</md-table-head>
+            <md-table-head>Summe der Zahlungen</md-table-head>
+            <md-table-head>Summe der Kosten</md-table-head>
           </md-table-row>
         </md-table-header>
 

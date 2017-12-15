@@ -1,5 +1,5 @@
 {
-  "authorityURL": "localhost:10000",
-  "providerURL": "localhost:10001",
+  "authorityURL": "mobilitypricing.ti.bfh.ch:10000",
+  "providerURL": "mobilitypricing.ti.bfh.ch:10001",
   "googleMapsKey": "AIzaSyATNKqOZf7zJdKrPbiUFTF36KlsQFmSRu0"
 }

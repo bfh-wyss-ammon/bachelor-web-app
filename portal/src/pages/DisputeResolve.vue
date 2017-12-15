@@ -1,7 +1,7 @@
 <template>
   <md-theme md-name="provider">
     <div>
-      <top-bar :title="'DisputeResolve'"></top-bar>
+      <top-bar :title="'Schlichtung'"></top-bar>
 
 
       <md-tabs md-right @change="change">
@@ -16,11 +16,11 @@
       <md-list>
         <md-theme md-name="authority" v-for="(dispute, index) in disputes" :key="index">
           <md-list-item>
-            <span>GroupId: {{dispute.group}} - Status: {{dispute.state}}</span>
+            <span>Gruppen ID: {{dispute.group}} - Status: {{dispute.state}}</span>
             <md-list-expand v-if="dispute.disputeResults">
               <md-list>
                 <md-list-item class="md-inset" v-for="res in dispute.disputeResults">
-                    <span>{{res.userId}} - {{res.deltaToll}}</span>
+                    <span>Benutzer ID:{{res.userId}} Differenz:{{res.deltaToll}}</span>
                 </md-list-item>
               </md-list>
             </md-list-expand>
@@ -55,7 +55,7 @@
         var periode = this.days[this.selectedDate].split('.').join('-');
         ProviderHttp.get('/resolve/' + periode)
           .then((res) => {
-            alert('triggered');
+            alert('Schlichtung ausgelöst');
         }, (err) => {
           MessageBus.$emit('on-error', err);
         });

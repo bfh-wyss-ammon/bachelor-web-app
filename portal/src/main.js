@@ -26,18 +26,18 @@ Vue.use(VueMaterial)
 Vue.use(VueAxios, axios)
 
 Vue.config.productionTip = false
-Vue.prototype.$authortiyWebSocketURL = `ws://${configuration.authorityURL}/sockets`;
-Vue.prototype.$providerWebSocketURL = `ws://${configuration.providerURL}/sockets`;
+Vue.prototype.$authortiyWebSocketURL = `wss://${configuration.authorityURL}/sockets`;
+Vue.prototype.$providerWebSocketURL = `wss://${configuration.providerURL}/sockets`;
 
 
 export const AuthorityHttp = axios.create({
-  baseURL: `http://${configuration.authorityURL}/api/protected`,
+  baseURL: `https://${configuration.authorityURL}/api/protected`,
   timeout: 5000,
   headers: {'x-secure-token': '7596b176-c54a-11e7-abc4-cec278b6b50a'}
 });
 
 export const ProviderHttp = axios.create({
-  baseURL: `http://${configuration.providerURL}/api/protected`,
+  baseURL: `https://${configuration.providerURL}/api/protected`,
   timeout: 5000,
   headers: {'x-secure-token': '9b8518f9-be03-4cba-a75c-18d73b0e395a'}
 });

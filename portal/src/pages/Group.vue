@@ -1,12 +1,12 @@
 <template>
   <md-theme md-name="authority">
-    <top-bar :title="'Groups'"></top-bar>
+    <top-bar :title="'Gruppen'"></top-bar>
     <div class="group">
       <md-tabs ref="tabs">
-        <md-tab id="overview" md-label="Overview" md-accent>
+        <md-tab id="overview" md-label="ÜBERSICHT" md-accent>
           <group-list :groups="groups"></group-list>
         </md-tab>
-        <md-tab md-label="New">
+        <md-tab md-label="NEU">
           <group-new v-on:created="load"></group-new>
         </md-tab>
       </md-tabs>
